@@ -1,0 +1,4 @@
+CREATE TABLE Objects (
+name VARCHAR(10) PRIMARY KEY
+)
+
