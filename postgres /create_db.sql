@@ -48,24 +48,28 @@ stimulus VARCHAR(10) REFERENCES Stimuli (name) ON DELETE CASCADE,
 objects VARCHAR(10) REFERENCES Objects (name) ON DELETE CASCADE
 );
 
+CREATE TABLE CallTypes (
+calltype_id INT PRIMARY KEY,
+abbr VARCHAR(10),
+calltype VARCHAR(20),
+description VARCHAR(50),
+modulation_type VARCHAR(10),
+category VARCHAR(10),
+color VARCHAR(10)
+);
+
 
 CREATE TABLE Calls (
 id SERIAL PRIMARY KEY,
-rec_id INT,
-call_id INT,
-call_type VARCHAR(10),
-start_time NUMERIC,
+rec_id INT REFERENCES Recordings (rec_id) ON DELETE CASCADE,
+calltype_id INT REFERENCES CallTypes (calltype_id) ON DELETE CASCADE,
+Nlx_time NUMERIC,
+Nlx_adjusted NUMERIC,
 duration NUMERIC,
+contact BIT,
 caller VARCHAR(10),
-caller_sex VARCHAR(10),
-FOREIGN KEY rec_id REFERENCES Recordings(rec_id) ON DELETE CASCADE
-)
-
-
-
-
-
-
+caller_sex VARCHAR(10)
+);
 
 
 
