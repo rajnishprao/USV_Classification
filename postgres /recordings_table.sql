@@ -18,8 +18,6 @@ INSERT INTO Recordings (rec_id,session_id,paradigm,stimulus,stimulus_status,stim
 (71002,71,'partner','R11-M2','null','front','1','null','front','0',2322997.487, 3228626.282),
 (71003,71,'partner','R11-F1','es','front','1','null','front','0',3275673.778, 4173613.387),
 (71004,71,'partner','R11-M2','null','front','1','null','front','0',4261111.597, 5158844.431),
-(71005,71,'partner','R11-F1','es','front','1','null','front','0',0,0),
-(71006,71,'partner','R11-M2','null','front','1','null','front','0',0,0)
+(71005,71,'partner','R11-F1','es','front','1','null','front','0',5293552.797,6190957.756),
+(71006,71,'partner','R11-M2','null','front','1','null','front','0',6289611.718,7190362.761)
 ;
-
-
