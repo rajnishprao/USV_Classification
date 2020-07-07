@@ -1,4 +1,4 @@
-# trying out an extended (Stefan's?) architechture here
+# trying out DeepSqueak architechture 
 # seems to work ok
 
 import matplotlib.pyplot as plt
@@ -29,22 +29,23 @@ model = Sequential([
         padding='same'),
     BatchNormalization(),
     Activation('relu'),
-    MaxPool2D(pool_size=(3,2),strides=(2,1)),
-    Conv2D(filters=16, kernel_size=(5,5),strides=(2,2),
+    MaxPool2D(pool_size=(3,2), strides=(2,1)),
+    Conv2D(filters=16, kernel_size=(5,5), strides=(2,2),
         padding='same'),
     BatchNormalization(),
     Conv2D(filters=20, kernel_size=(5,5),strides=(2,2),
         padding='same'),
     BatchNormalization(),
     Activation('relu'),
-    MaxPool2D(pool_size=(2,2),strides=(2,2)),
+    MaxPool2D(pool_size=(2,2), strides=(2,2)),
     Conv2D(filters=32, kernel_size=(5,5),strides=(2,2),
         padding='same'),
     BatchNormalization(),
-    Conv2D(filters=40, kernel_size=(5,5),strides=(2,2),
+    Conv2D(filters=40, kernel_size=(5,5), strides=(2,2),
         padding='same'),
     BatchNormalization(),
     Activation('relu'),
+    Flatten(),
     Dense(64),
     BatchNormalization(),
     Activation('relu'),
