@@ -15,6 +15,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import EarlyStopping
 from keras import backend as K
 from keras import regularizers
+#from keras.optimizers import SGD
 
 
 # data generator for training set
@@ -58,7 +59,7 @@ K.clear_session()
 callback = EarlyStopping(monitor='val_loss', mode ='min', patience=5)
 
 model = Sequential([
-    Conv2D(filters=8, kernel_size=(5,3),strides=(2,2),kernel_initializer='he_normal',
+    Conv2D(filters=8, kernel_size=(5,5),strides=(2,2),kernel_initializer='he_normal',
         padding='same',input_shape=(334, 217, 3),kernel_regularizer=regularizers.l2(0.01)),
     BatchNormalization(),
 
@@ -100,9 +101,10 @@ model = Sequential([
     Activation('softmax')
 ])
 
+#opt = SGD(lr=0.001, momentum=0.9)
 model.compile(optimizer='adam', loss='categorical_crossentropy',metrics=['accuracy'])
 
-history = model.fit_generator(train_ds, epochs=30, steps_per_epoch=32,
+history = model.fit_generator(train_ds, epochs=50, steps_per_epoch=32,
     validation_data=validation_ds, validation_steps=32, callbacks=[callback],
     class_weight={0:1.0, 1:1.4, 2:1.1})
 
@@ -115,6 +117,7 @@ plt.plot(epochs, val_loss, 'k', label='Validation Loss')
 plt.title('Loss: Training and Validation')
 plt.xlabel('Epochs')
 plt.legend()
+plt.savefig('loss_adam.jpg', dpi=300)
 plt.show()
 
 # # plot accuracy
@@ -127,4 +130,5 @@ plt.title('Accuracy: Training and Validation')
 plt.xlabel('Epochs')
 plt.ylim(0, 1)
 plt.legend()
+plt.savefig('accuracy_adam.jpg', dpi=300)
 plt.show()
