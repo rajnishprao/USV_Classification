@@ -19,15 +19,15 @@ from keras import regularizers
 
 # data generator for training set
 train_datagen = ImageDataGenerator(rescale = 1./255,
-     featurewise_std_normalization=True,
-     samplewise_std_normalization=True,
+     #featurewise_std_normalization=True,
+     #samplewise_std_normalization=True,
      width_shift_range=0.1,
     brightness_range=(0.2,0.8))
 
 # data generator for validation set
 validation_datagen = ImageDataGenerator(rescale = 1./255,
-    featurewise_std_normalization=True,
-    samplewise_std_normalization=True,
+    #featurewise_std_normalization=True,
+    #samplewise_std_normalization=True,
     width_shift_range=0.1,
    brightness_range=(0.2,0.8))
 
@@ -121,6 +121,7 @@ plt.plot(epochs, val_loss, 'k', label='Validation Loss')
 plt.title('Loss: Training and Validation')
 plt.xlabel('Epochs')
 plt.legend()
+plt.savefig('loss_adam_30_aug.jpg', dpi=300)
 plt.show()
 
 # # plot accuracy
@@ -133,4 +134,5 @@ plt.title('Accuracy: Training and Validation')
 plt.xlabel('Epochs')
 plt.ylim(0, 1)
 plt.legend()
+plt.savefig('accuracy_adam_30_aug.jpg', dpi=300)
 plt.show()
