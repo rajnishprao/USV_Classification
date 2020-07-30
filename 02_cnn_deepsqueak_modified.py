@@ -5,7 +5,10 @@
 import os
 os.environ["KERAS_BACKEND"] = "plaidml.keras.backend"
 
+import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 import keras
 from keras.models import Sequential
@@ -15,6 +18,8 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import EarlyStopping
 from keras import backend as K
 from keras import regularizers
+from sklearn.metrics import classification_report, confusion_matrix
+
 #from keras.optimizers import SGD
 
 
@@ -28,7 +33,7 @@ train_datagen = ImageDataGenerator(rescale = 1./255)
 validation_datagen = ImageDataGenerator(rescale = 1./255)
 
 # data generator for test set
-#test_datagen = ImageDataGenerator(rescale = 1./255)
+test_datagen = ImageDataGenerator(rescale = 1./255)
 
 # generator for reading train data from folder
 train_ds = train_datagen.flow_from_directory(
@@ -46,14 +51,14 @@ validation_ds = validation_datagen.flow_from_directory(
     batch_size = 32,
     class_mode = 'categorical')
 
-# # generator for reading test data from folder
-# test_generator = test_datagen.flow_from_directory(
-#     'data/test',
-#     target_size = (256, 256),
-#     color_mode = 'rgb',
-#     batch_size = 1,
-#     class_mode = 'binary',
-#     shuffle = False)
+# generator for reading test data from folder
+test_ds = test_datagen.flow_from_directory(
+    './test_data',
+    target_size = (334, 217),
+    color_mode = 'rgb',
+    batch_size = 1,
+    class_mode = 'categorical',
+    shuffle = False)
 
 K.clear_session()
 callback = EarlyStopping(monitor='val_loss', mode ='min', patience=5)
@@ -104,7 +109,7 @@ model = Sequential([
 #opt = SGD(lr=0.001, momentum=0.9)
 model.compile(optimizer='adam', loss='categorical_crossentropy',metrics=['accuracy'])
 
-history = model.fit_generator(train_ds, epochs=50, steps_per_epoch=32,
+history = model.fit_generator(train_ds, epochs=30, steps_per_epoch=32,
     validation_data=validation_ds, validation_steps=32, callbacks=[callback],
     class_weight={0:1.0, 1:1.4, 2:1.1})
 
@@ -117,7 +122,7 @@ plt.plot(epochs, val_loss, 'k', label='Validation Loss')
 plt.title('Loss: Training and Validation')
 plt.xlabel('Epochs')
 plt.legend()
-plt.savefig('loss_adam.jpg', dpi=300)
+plt.savefig('cnn_loss.jpg', dpi=300)
 plt.show()
 
 # # plot accuracy
@@ -130,5 +135,28 @@ plt.title('Accuracy: Training and Validation')
 plt.xlabel('Epochs')
 plt.ylim(0, 1)
 plt.legend()
-plt.savefig('accuracy_adam.jpg', dpi=300)
+plt.savefig('cnn_accuracy.jpg', dpi=300)
 plt.show()
+
+# calculate test scores
+test_loss, test_acc = model.evaluate_generator(test_ds, steps=50)
+print('Test Loss:', test_loss)
+print('Test Accuracy:', test_acc)
+
+#Confusion Matrix and Classification Report - with test data set
+Y_pred = model.predict_generator(test_ds)#, num_of_test_samples // batch_size+1)
+y_pred = np.argmax(Y_pred, axis=1)
+cm = confusion_matrix(test_ds.classes, y_pred)
+print('Confusion Matrix - Test Data Set')
+print(cm)
+index = ['complex', 'flat', 'trill']
+columns = ['complex', 'flat', 'trill']
+cm_df = pd.DataFrame(cm, columns, index)
+sns.heatmap(cm_df/np.sum(cm_df), annot=True, fmt='.2%', cmap='Blues', cbar=False) #fmt=d gives no. of calls as integers
+plt.title('Confusion Matrix')
+plt.xlabel('True Classes')
+plt.ylabel('Predicted Classes')
+plt.savefig('cnn_confusion_matrix.jpg', dpi=300)
+plt.show()
+print('Classification Report - Test Data Set')
+print(classification_report(test_ds.classes, y_pred, target_names=columns))
