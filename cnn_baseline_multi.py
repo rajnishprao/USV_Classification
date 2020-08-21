@@ -1,8 +1,6 @@
 '''
 Automated Classification of Rat Ultrasonic Vocalizations (USVs):
-
-multi-class classification of 'flat', 'complex' and 'trill' calltypes
-
+multi-class categorisation of flat, complex and trill calltypes
 '''
 
 

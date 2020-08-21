@@ -1,8 +1,8 @@
 '''
 Automated Classification of Rat Ultrasonic Vocalizations (USVs):
-
-binary classification of 'flat' and 'trill' calltypes
+binary categorisation of flat and trill calltypes
 '''
+
 
 import os
 import pandas as pd
