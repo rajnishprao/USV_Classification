@@ -33,7 +33,7 @@ conda install -y -c conda-forge tensorflow
 pip install -r requirements.txt
 ```
 
-
-
-![Slide1] (https://raw.github.com/rajnishprao/USV-Classification/blob/master/slides/spiced_final_project_git.001.png)
+```
+![Alt text](/slides/spiced_final_project_git_001.png?raw=true "Optional Title")
+```
 
