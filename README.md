@@ -35,5 +35,5 @@ pip install -r requirements.txt
 
 
 
-! [Slides](spiced_final_project_git.001.png)
+(/slides/spiced_final_project_git.001.png)
 
