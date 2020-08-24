@@ -35,5 +35,5 @@ pip install -r requirements.txt
 
 
 
-(/slides/spiced_final_project_git.001.png)
+![Slide1] (https://raw.github.com/rajnishprao/USV-Classification/blob/master/slides/spiced_final_project_git.001.png)
 
