@@ -33,21 +33,3 @@ conda install -y -c conda-forge tensorflow
 pip install -r requirements.txt
 ```
 
-![spiced_final_project_git 001](https://user-images.githubusercontent.com/60617095/91073626-a2fa6800-e63b-11ea-8322-58dac80106ad.png)
-![spiced_final_project_git 002](https://user-images.githubusercontent.com/60617095/91073629-a42b9500-e63b-11ea-8fab-0440cd946395.png)
-![spiced_final_project_git 003](https://user-images.githubusercontent.com/60617095/91073636-a5f55880-e63b-11ea-8e9c-f38cc734184e.png)
-![spiced_final_project_git 004](https://user-images.githubusercontent.com/60617095/91073638-a68def00-e63b-11ea-9cc3-b8cfa5fb82d8.png)
-![spiced_final_project_git 005](https://user-images.githubusercontent.com/60617095/91073641-a7268580-e63b-11ea-9363-ad633fb2c3d1.png)
-![spiced_final_project_git 006](https://user-images.githubusercontent.com/60617095/91073643-a7bf1c00-e63b-11ea-9caa-45a13cc4d102.png)
-![spiced_final_project_git 007](https://user-images.githubusercontent.com/60617095/91073644-a857b280-e63b-11ea-9381-cc058b80b069.png)
-![spiced_final_project_git 008](https://user-images.githubusercontent.com/60617095/91073646-a8f04900-e63b-11ea-9fe8-41add5fd5e88.png)
-![spiced_final_project_git 009](https://user-images.githubusercontent.com/60617095/91073647-a8f04900-e63b-11ea-9717-3702c9f74989.png)
-![spiced_final_project_git 010](https://user-images.githubusercontent.com/60617095/91073648-a988df80-e63b-11ea-8ab8-94f9f8920d24.png)
-![spiced_final_project_git 011](https://user-images.githubusercontent.com/60617095/91073649-a988df80-e63b-11ea-8fc7-e1b75c8c8841.png)
-![spiced_final_project_git 012](https://user-images.githubusercontent.com/60617095/91073650-aa217600-e63b-11ea-8bdc-b9d84c866355.png)
-![spiced_final_project_git 013](https://user-images.githubusercontent.com/60617095/91073652-aa217600-e63b-11ea-9ec5-7c1ccb9a9540.png)
-![spiced_final_project_git 014](https://user-images.githubusercontent.com/60617095/91073653-aaba0c80-e63b-11ea-8964-b23ea82dcddb.png)
-![spiced_final_project_git 015](https://user-images.githubusercontent.com/60617095/91073656-aaba0c80-e63b-11ea-83ce-43b6f525a882.png)
-![spiced_final_project_git 016](https://user-images.githubusercontent.com/60617095/91073658-ab52a300-e63b-11ea-8e4f-2cf8a17afc27.png)
-![spiced_final_project_git 017](https://user-images.githubusercontent.com/60617095/91073661-abeb3980-e63b-11ea-91d3-ea8de813250d.png)
-![spiced_final_project_git 018](https://user-images.githubusercontent.com/60617095/91073662-abeb3980-e63b-11ea-82a4-4dc3f6c1f086.png)
