@@ -36,6 +36,6 @@ pip install -r requirements.txt
 ```
 ![Alt text](/slides/spiced_final_project_git_001.png?raw=true)
 ![Slide1](slides/spiced_final_project_git.001.png?raw=True)
-!{Slide1](https://raw.githubusercontent.com/rajnishprao/USV-Classification/master/slides/spiced_final_project_git.001.png?token=AOOPDB6R2VU4VQEZLU47UDS7IPWWY)
+![Slide1](https://raw.githubusercontent.com/rajnishprao/USV-Classification/master/slides/spiced_final_project_git.001.png?token=AOOPDB6R2VU4VQEZLU47UDS7IPWWY)
 ```
 
