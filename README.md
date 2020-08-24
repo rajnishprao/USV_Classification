@@ -34,6 +34,7 @@ pip install -r requirements.txt
 ```
 
 ```
-![Alt text](/slides/spiced_final_project_git_001.png?raw=true "Optional Title")
+![Alt text](/slides/spiced_final_project_git_001.png?raw=true)
+![Slide1](slides/spiced_final_project_git.001.png?raw=True)
 ```
 
