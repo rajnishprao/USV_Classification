@@ -128,8 +128,11 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# CSV files
+# csv files
 *.csv
+
+# Jupyter notebooks
+*.ipynb 
 
 # DS_Store
 .DS_Store
