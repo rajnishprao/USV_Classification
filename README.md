@@ -34,3 +34,7 @@ pip install -r requirements.txt
 ```
 
 ![](slides/spiced_final_project_git.001.png)
+
+![](slides/spiced_final_project_git.003.png)
+
+![](slides/spiced_final_project_git.002.png)
