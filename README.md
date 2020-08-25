@@ -25,11 +25,3 @@ Rats were placed on two elevated platforms separated by a gap. Spontaneous facia
 The CNNs are implemented in Python on a Keras backend to train on an AMD GPU (using PlaidML, much thanks to Ricardo Di Sipio). The code can be used to run on a TensorFlow backend by simply commenting out the 'Activate Keras backend' line and replacing all "import keras..."statements with "import tensorflow.keras...".
 
 #### Installation
-
-```bash
-conda create -n usv_classification pip python=3.6.10
-conda activate usv_classification
-conda install -y -c conda-forge tensorflow
-pip install -r requirements.txt
-```
-
