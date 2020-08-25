@@ -35,6 +35,30 @@ pip install -r requirements.txt
 
 ![](slides/spiced_final_project_git.001.png)
 
-![](slides/spiced_final_project_git.003.png)
-
 ![](slides/spiced_final_project_git.002.png)
+
+![](slides/spiced_final_project_git.004.png)
+
+![](slides/spiced_final_project_git.007.png)
+
+![](slides/spiced_final_project_git.008.png)
+
+![](slides/spiced_final_project_git.009.png)
+
+![](slides/spiced_final_project_git.010.png)
+
+![](slides/spiced_final_project_git.011.png)
+
+![](slides/spiced_final_project_git.012.png)
+
+![](slides/spiced_final_project_git.013.png)
+
+![](slides/spiced_final_project_git.014.png)
+
+![](slides/spiced_final_project_git.015.png)
+
+![](slides/spiced_final_project_git.016.png)
+
+![](slides/spiced_final_project_git.017.png)
+
+![](slides/spiced_final_project_git.018.png)
