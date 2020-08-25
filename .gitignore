@@ -132,7 +132,7 @@ dmypy.json
 *.csv
 
 # Jupyter notebooks
-*.ipynb 
+*.ipynb
 
 # DS_Store
 .DS_Store
