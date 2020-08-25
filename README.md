@@ -32,3 +32,5 @@ conda activate usv_classification
 conda install -y -c conda-forge tensorflow
 pip install -r requirements.txt
 ```
+
+![](slides/spiced_final_project_git.001.png)
