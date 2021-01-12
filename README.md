@@ -8,6 +8,8 @@ Rats are highly social creatures that live in large groups with established hier
 
 This project aims to train a Convolutional Neural Networks (CNN) to classify USVs into these 3 predominant call types. For comparison, a CNN developed for mouse USVs was also used (DeepSqueak, Coffey et al, 2019).
 
+In addition, attempts were also made to classify the calls depending on the sex and estrous state of the caller.
+
 ### Methods
 
 #### Data Acquisition
@@ -62,3 +64,7 @@ pip install -r requirements.txt
 ![](slides/spiced_final_project_git.014.png)
 
 ![](slides/spiced_final_project_git.015.png)
+
+![](slides/spiced_final_project_git.016.png)
+
+![](slides/spiced_final_project_git.017.png)
