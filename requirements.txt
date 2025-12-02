@@ -7,6 +7,6 @@ pandas==2.2.3
 tf-nightly
 plaidml==0.7.0
 plaidml-keras==0.7.0
-Keras==3.8.0
+Keras==3.12.0
 keras-applications==1.0.8
 keras-preprocessing==1.1.2
